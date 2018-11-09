@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Fake Names Generator</string>
+    <string name="genNewName">Generate New Name</string>
+</resources>

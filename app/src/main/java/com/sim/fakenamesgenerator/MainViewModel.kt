@@ -8,9 +8,17 @@ import java.util.*
  */
 class MainViewModel constructor(private val repository: FakeNamesRepository) : ViewModel() {
 
+    var selectedName: String = "---"
+
     private val fakeNamePoolSize = repository.fakeNamePool().size
 
-    fun getNewFakeName() = repository.fakeNamePool()[Random().nextInt(fakeNamePoolSize)]
+    fun getNewFakeName(): String {
+
+        selectedName = repository.fakeNamePool()[Random().nextInt(fakeNamePoolSize)]
+
+        return selectedName
+    }
 
 }
+
 

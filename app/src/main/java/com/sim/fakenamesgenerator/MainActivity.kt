@@ -25,9 +25,12 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
 
         initView()
+
     }
 
     private fun initView() {
+
+        txtResult.text = viewModel.selectedName
 
         btnGenName.setOnClickListener {
             txtResult.text = viewModel.getNewFakeName()
